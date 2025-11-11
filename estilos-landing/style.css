@@ -1,0 +1,450 @@
+/*padroes gerais*/
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap');
+
+:root {
+
+    --fonte-padrao: "Abel", sans-serif;
+    --fonte-titulos: 'Bebas Neue';
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: #555;
+    padding-top: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fonte-titulos);
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    margin: 30px;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+input,
+select,
+textarea {
+    flex-grow: 1;
+    flex-basis: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+textarea {
+    flex-basis: 100%;
+    min-height: 100px;
+}
+
+.texto-intermediario {
+    text-align: center;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.7;
+    border-radius: 12px;
+}
+
+.texto-intermediario h3 {
+    font-family: var(--fonte-titulos);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+
+
+.flex-800 {
+    flex-basis: 800px;
+}
+
+.flex-300 {
+    flex-basis: 300px;
+}
+
+.flex-p100 {
+    flex-basis: 100%;
+}
+
+.flex-p70 {
+    flex-basis: 70%;
+}
+
+.flex-p20 {
+    flex-basis: 20%;
+}
+
+button {
+    flex-grow: 1;
+    background-color: #080747;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #080757;
+}
+
+button[type="reset"] {
+    background-color: #879221;
+}
+
+button[type="reset"]:hover {
+    background-color: #828d20;
+}
+
+/*fim padroes gerais*/
+/* menu de navegação */
+nav ul {
+    display: flex;
+    background-color: #111;
+    background-image: linear-gradient(to bottom, #000, rgb(32, 1, 32));
+    margin: 0;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 9999;
+}
+
+ul a li {
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: padding 0.2s ease-in-out;
+}
+
+ul a li:hover {
+    background-image: linear-gradient(to top, #000, rgb(43, 1, 43), rgb(49, 2, 49));
+    border-radius: 8px;
+}
+
+ul a:last-child {
+    margin-left: auto;
+}
+
+ul a li.shrink {
+    padding: 8px 20px;
+}
+
+/* fim do menu de navegação */
+/* inicio dos slides */
+.slideshow {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    animation: slide 20s infinite ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        left: 0px
+    }
+
+    20% {
+        left: 0px
+    }
+
+    30% {
+        left: -100%
+    }
+
+    50% {
+        left: -100%
+    }
+
+    60% {
+        left: -200%
+    }
+
+    90% {
+        left: -200%
+    }
+
+    100% {
+        left: 0px
+    }
+}
+
+.slideshow img {
+    width: 100%;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 60%;
+    min-width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+}
+
+.texto h2 {
+    color: #FFF;
+    text-align: start;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+/* fim dos slides */
+/* inicio do portfolio de academias */
+#portfolio {
+    max-width: 80%;
+    margin: 0px auto;
+    background-color: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    transition: transform 0.5s, box-shadow 0.5s, border 0.5s;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    border: 3px solid #FFF;
+}
+
+/*fim do portfolio de academias */
+/* inicio formulario de aula experimental */
+#aula-exp {
+    max-width: 65%;
+    background-color: #eee;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+#aula-exp h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/* fim do form aula experimental */
+
+/*formulario avaliação inicial do aluno*/
+#avaliacao-aluno {
+    max-width: 65%;
+    background-color: #eee;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+#avaliacao-aluno h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+/*fim do form avaliação inicial do aluno*/
+/* incia os feedbacks dos alunos */
+#comentarios {
+    max-width: 100%;
+    background-color: #f5f5f5;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    padding: 10px 40px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#comentarios h2 {
+    width: 100%;
+}
+
+.comentario {
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    flex-basis: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.comentario img {
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.textoComentario {
+    padding: 0px 20px;
+    text-align: justify;
+    text-indent: 30px;
+    font-style: italic;
+}
+
+/* fim dos feedbacks dos alunos */
+/* início modal*/
+dialog {
+    width: 40%;
+    min-width: 300px;
+    padding: 0px 30px 20px 30px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#btnFechar {
+    background-color: #879221;
+}
+
+#btnFechar:hover {
+    background-color: #77811d;
+}
+
+dialog button {
+    margin-top: 20px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+dialog label.erro {
+    display: inline-block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(255, 190, 190);
+    color: rgb(86, 2, 2);
+    text-align: center;
+}
+
+/* fim do modal*/
+/* footer*/
+footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* fim do footer*/
+
+/*responsividade media queries*/
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+
+    body {
+        padding-top: 0px;
+    }
+
+    ul a li {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+
+    .slideshow {
+        margin-top: 20px;
+    }
+
+    .texto {
+        width: 90%;
+        min-width: unset;
+        padding: 15px;
+    }
+
+    .texto h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .texto p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    ul a li {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+
+    .texto {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .texto h2 {
+        font-size: 1.1rem;
+    }
+
+    .texto p {
+        font-size: 0.9rem;
+    }
+}

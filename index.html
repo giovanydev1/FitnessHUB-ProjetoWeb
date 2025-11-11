@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitnessHUB</title>
+    <link rel="shortcut icon" href="./imagens/favicon-fhub.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./estilos-landing/style.css">
+</head>
+
+<body id="inicio">
+    <header>
+        <nav>
+            <ul>
+                <a href="#inicio">
+                    <li>Home</li>
+                </a>
+                <a href="#sobre">
+                    <li>Nossas Unidades</li>
+                </a>
+                <a href="#venha-conhecer">
+                    <li>Agende sua Aula</li>
+                </a>
+                <a href="#comentarios">
+                    <li>Feedback</li>
+                </a>
+                <a href="#login" id="btnLogin">
+                    <li><i class="fa fa-user"></i> &nbsp;Admin</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="slideshow">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./imagens/pessoas/imagem-treino1.jpg" alt="Imagem 1">
+                    <div class="texto">
+                        <h2>Bem-vindo(a) ao FitnessHUB</h2>
+                        <P>
+                            Seja você um iniciante ou um atleta experiente, estamos aqui para ajudá-lo a alcançar o sua
+                            melhor versão.
+                        </P>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./imagens/pessoas/imagem-treino2.jpg" alt="Imagem 2">
+                    <div class="texto">
+                        <h2>Equilíbrio e bem-estar</h2>
+                        <P>
+                            Corpo forte e saudável, mente tranquila. Movimente-se, mude sua rotina.
+                        </P>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./imagens/pessoas/imagem-treino3.jpg" alt="Imagem 3">
+                    <div class="texto">
+                        <h2>Superação e resultados</h2>
+                        <P>
+                            Atinja seus objetivos e celebre suas novas conquistas.
+                        </P>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="texto-intermediario">
+            <h3>FitnessHUB</h3>
+            <p>
+                A <strong>FitnessHUB</strong> é mais do que uma academia — somos um ecossistema voltado ao
+                <strong>bem-estar e à qualidade de vida</strong>.
+                Com mais de <strong>20 unidades espalhadas pelo país</strong>, oferecemos uma estrutura completa para
+                que cada pessoa encontre o seu próprio ritmo e alcance seus objetivos de forma saudável e duradoura.
+            </p>
+            <p>
+                Nossos espaços contam com áreas para <strong>musculação, treinos funcionais, aulas coletivas, yoga,
+                    pilates e esportes</strong>, além de acompanhamento profissional personalizado.
+                Aqui, corpo e mente trabalham juntos em busca de equilíbrio e evolução constante.
+            </p>
+            <p>
+                Cuidar de si é o primeiro passo para viver melhor — e na <strong>FitnessHUB</strong> você encontra o
+                ambiente ideal para iniciar (ou retomar) uma rotina mais saudável, com energia, foco e motivação em cada
+                treino.
+            </p>
+        </section>
+
+
+        <section id="portfolio">
+            <h2>Nossas Unidades</h2>
+            <div class="gallery">
+                <img src="./imagens/academias/gym1.jpg" alt="Academia 1">
+                <img src="./imagens/academias/gym2.jpg" alt="Academia 2">
+                <img src="./imagens/academias/gym3.jpg" alt="Academia 3">
+                <img src="./imagens/academias/gym4.jpg" alt="Academia 4">
+                <img src="./imagens/academias/gym5.jpg" alt="Academia 5">
+                <img src="./imagens/academias/gym6.jpg" alt="Academia 6">
+                <img src="./imagens/academias/gym7.jpg" alt="Academia 7">
+                <img src="./imagens/academias/gym8.jpg" alt="Academia 8">
+            </div>
+        </section>
+
+        <section id="venha-conhecer" class="texto-intermediario">
+            <h3>Venha viver a experiência</h3>
+            <p>
+                Cada unidade da <strong>FitnessHUB</strong> foi pensada para oferecer conforto, motivação e tecnologia
+                de ponta.
+                Nossos ambientes são amplos, climatizados e equipados com aparelhos de última geração — tudo para que o
+                seu treino seja eficiente e prazeroso.
+            </p>
+            <p>
+                Aqui, você encontra um time de profissionais qualificados prontos para orientar seu desenvolvimento
+                físico e mental,
+                seja em <strong>aulas individuais</strong> ou <strong>treinos em grupo</strong>.
+                Além disso, nossas quadras esportivas e estúdios de funcional garantem uma rotina de exercícios completa
+                e dinâmica.
+            </p>
+            <p>
+                Se ainda não conhece a FitnessHUB, aproveite para <strong>agendar uma aula experimental
+                    gratuita</strong> e descubra como é treinar em um ambiente que valoriza saúde, bem-estar e evolução
+                contínua.
+            </p>
+        </section>
+
+
+        <section id="aula-exp">
+            <h2>Agendar Aula Experimental</h2>
+            <form onsubmit="enviarAgendamento(event)">
+                <input type="text" id="nome" placeholder="Seu nome completo">
+                <input type="email" id="email" placeholder="Seu e-mail">
+                <input type="tel" id="telefone" placeholder="Seu telefone (41) 99999-8888">
+
+                <select id="tipo-aula">
+                    <option selected disabled>Tipo de aula</option>
+                    <option value="musculacao">Musculação</option>
+                    <option value="funcional">Treino Funcional</option>
+                    <option value="yoga">Yoga</option>
+                    <option value="pilates">Pilates</option>
+                    <option value="ritmos">Ritmos</option>
+                    <option value="lutas">Lutas</option>
+                    <option value="esportes">Esportes</option>
+                </select>
+
+                <input type="date" id="data">
+                <input type="time" id="hora">
+
+                <textarea id="observacoes" rows="4" placeholder="Observações (opcional)"></textarea>
+
+                <button type="submit">Agendar Aula</button>
+            </form>
+        </section>
+
+        <section class="texto-intermediario">
+            <h3>Prepare-se para o seu melhor desempenho</h3>
+            <p>
+                Antes de iniciar seus treinos, é importante conhecermos um pouco mais sobre você.
+                Com base nas informações fornecidas, nossa equipe consegue entender melhor o seu nível de experiência,
+                seus hábitos e seus objetivos pessoais.
+            </p>
+            <p>
+                Essa avaliação inicial nos ajuda a montar um plano de treino mais assertivo e seguro, respeitando o seu
+                corpo e potencializando os resultados.
+                Cada aluno é único — e aqui na <strong>FitnessHUB</strong>, o acompanhamento também é.
+            </p>
+            <p>
+                Preencha o formulário a seguir com atenção e dê o primeiro passo rumo à sua evolução com a gente.
+            </p>
+        </section>
+
+
+        <section id="avaliacao-aluno">
+            <h2>Avaliação Inicial do Aluno</h2>
+            <form onsubmit="enviarAvaliacao(event)">
+                <input type="text" id="nome-avaliacao" placeholder="Seu nome completo">
+                <input type="number" id="idade" placeholder="Idade">
+                <input type="number" id="peso" placeholder="Peso (kg)">
+                <select id="experiencia">
+                    <option selected disabled>Já treinou antes?</option>
+                    <option value="sim">Sim, já treino há algum tempo</option>
+                    <option value="nao">Não, sou iniciante</option>
+                </select>
+
+                <select id="dieta" required>
+                    <option selected disabled>Segue algum tipo de dieta?</option>
+                    <option value="equilibrada">Dieta equilibrada</option>
+                    <option value="hiperproteica">Hiperproteica</option>
+                    <option value="vegetariana">Vegetariana</option>
+                    <option value="nenhuma">Não sigo nenhuma dieta</option>
+                </select>
+
+                <textarea id="objetivos" rows="5"
+                    placeholder="Quais são seus objetivos na FitnessHUB? (ex: perder peso, ganhar massa, melhorar resistência...)"
+                    required></textarea>
+
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        </section>
+
+
+
+        <section id="comentarios">
+            <h2>Feedback dos Alunos</h2>
+            <div class="comentario">
+                <img src="./imagens/pessoas/pessoa1.jpg" alt="Pessoa 1">
+                <h3>Raul Gabriel</h3>
+                <div class="textoComentario">
+                    <p> “ — A FitnessHUB mudou completamente minha rotina! Os treinos são dinâmicos, o ambiente é super
+                        motivador e os instrutores realmente se preocupam com o nosso progresso. Em poucos meses já
+                        senti diferença na disposição e no humor.”</p>
+                </div>
+            </div>
+            <div class="comentario">
+                <img src="./imagens/pessoas/pessoa2.jpg" alt="Pessoa 2">
+                <h3>Marina Oliveira</h3>
+                <div class="textoComentario">
+                    <p> “ — Eu nunca gostei de academia, mas na FitnessHUB o ambiente é leve e acolhedor. Os treinos são
+                        adaptados e os instrutores têm muita paciência. Hoje não consigo mais ficar sem minhas aulas de
+                        funcional!”</p>
+                </div>
+            </div>
+            <div class="comentario">
+                <img src="./imagens/pessoas/pessoa3.jpg" alt="Pessoa 3">
+                <h3>Pedro Azuma</h3>
+                <div class="textoComentario">
+                    <p> “ — Comecei na FitnessHUB buscando melhorar minha postura e aliviar o estresse, e as aulas de
+                        yoga mudaram minha vida. Além do corpo, a mente também fica em paz. Super recomendo!”</p>
+                </div>
+            </div>
+            <div class="comentario">
+                <img src="./imagens/pessoas/pessoa4.jpg" alt="Pessoa 4">
+                <h3>Ahmed Kaur</h3>
+                <div class="textoComentario">
+                    <p> “ — A equipe da FitnessHUB é sensacional! Sempre disposta a ajudar e motivar. Gosto muito das
+                        aulas coletivas — é impossível não sair de lá com mais energia e bom humor.”</p>
+                </div>
+            </div>
+            <div class="comentario">
+                <img src="./imagens/pessoas/pessoa5.jpg" alt="Pessoa 5">
+                <h3>Victor Silva</h3>
+                <div class="textoComentario">
+                    <p> “ — Sou apaixonado por basquete e a quadra da FitnessHUB é simplesmente top! O espaço é bem
+                        cuidado, com piso ótimo e iluminação perfeita pra jogar. Além disso, o treino na academia ajudou
+                        muito no meu desempenho dentro da quadra. Ambiente incrível!”</p>
+                </div>
+            </div>
+            <div class="comentario">
+                <img src="./imagens/pessoas/pessoa6.jpg" alt="Pessoa 6">
+                <h3>Beatriz Santos</h3>
+                <div class="textoComentario">
+                    <p> “ — Adoro jogar vôlei e fiquei impressionada com a estrutura da quadra da FitnessHUB. Sempre tem
+                        gente animada pra jogar e o espaço é super organizado. É ótimo poder treinar e ainda praticar
+                        meu esporte favorito no mesmo lugar!”</p>
+                </div>
+            </div>
+        </section>
+        <dialog id="login">
+            <form>
+                <h2 class="flex-p100">Login</h2>
+                <label class="flex-p20" for="usuario"> Usuario:</label>
+                <input class="flex-p70" type="text" name="usuario" id="usuario">
+                <label class="flex-p20" for="senha"> Senha: </label>
+                <input class="flex-p70" type="password" name="senha" id="senha">
+                <button type="button" id="btnFechar">Sair</button>
+                <button type="button" onclick="logar()">Entrar</button>
+            </form>
+        </dialog>
+    </main>
+    <footer>
+        <p>FitnessHUB - Giovany Xavier & João Johann - &copy;2025</p>
+    </footer>
+    <script src="./script-landing.js"></script>
+</body>
+
+</html>
