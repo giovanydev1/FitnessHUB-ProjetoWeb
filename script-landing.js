@@ -46,7 +46,7 @@ function logar() {
   if (usuarioValido) {
     sessionStorage.setItem('usuarioLogado', 'true');
     sessionStorage.setItem('nomeUsuario', usuario);
-    window.location.href = "./admin/index.html";
+    window.location.href = "/FitnessHUB-ProjetoFinalizado/admin/index.html";
   } else {
     const erro = document.createElement('label');
     erro.classList.add('erro');
