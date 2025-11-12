@@ -25,10 +25,22 @@ function toggleMenuLateral() {
 // Salvar usuário
 function salvarUsuario() {
   event.preventDefault();
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
+  const nome = document.getElementById("nome").value.trim();
+  const email = document.getElementById("email").value.trim();
   const senha = document.getElementById("senha").value;
   const confSenha = document.getElementById("confSenha").value;
+
+  const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  if (!emailValido) {
+    alert("Por favor, insira um e-mail válido (ex: nome@exemplo.com)");
+    return;
+  }
+
+  if (senha === "" || confSenha === "") {
+    alert("As senhas não podem estar vazias.");
+    return;
+  }
 
   if (senha !== confSenha) {
     alert("As senhas não conferem.");
@@ -40,6 +52,7 @@ function salvarUsuario() {
   alert("Usuário salvo com sucesso!");
   window.location.reload();
 }
+
 
 // Exibir usuários
 function exibirUsuarios() {

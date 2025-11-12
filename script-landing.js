@@ -4,6 +4,12 @@ const btnLogin = document.getElementById('btnLogin');
 const btnFechar = document.getElementById('btnFechar');
 const login = document.getElementById('login');
 
+document.querySelector('#login form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  logar();
+});
+
+
 var dadosUsuarios = JSON.parse(localStorage.getItem('dadosUsuarios')) || [];
 
 // cria usuários iniciais
@@ -98,3 +104,18 @@ function enviarAvaliacao(event) {
   alert("Avaliação enviada com sucesso!");
   document.querySelector("#avaliacao-aluno form").reset();
 }
+
+//fatorial adicionado no html
+function calcularFatorial(event) {
+  event.preventDefault();
+  const n = parseInt(document.getElementById("numero").value);
+  let resultado = 1;
+
+  for (let i = 1; i <= n; i++) {
+    resultado *= i;
+  }
+
+  document.getElementById("resultado-fatorial").innerText = 
+    `O fatorial de ${n} é ${resultado}`;
+}
+

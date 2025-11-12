@@ -256,6 +256,15 @@
                 </div>
             </div>
         </section>
+        <section id="fatorial">
+            <h2>Calcular Fatorial</h2>
+            <form onsubmit="calcularFatorial(event)">
+                <input type="number" id="numero" placeholder="Digite um número" required>
+                <button type="submit">Calcular</button>
+            </form>
+            <p id="resultado-fatorial"></p>
+        </section>
+
         <dialog id="login">
             <form>
                 <h2 class="flex-p100">Login</h2>
@@ -264,7 +273,7 @@
                 <label class="flex-p20" for="senha"> Senha: </label>
                 <input class="flex-p70" type="password" name="senha" id="senha">
                 <button type="button" id="btnFechar">Sair</button>
-                <button type="button" onclick="logar()">Entrar</button>
+                <button type="submit" onclick="logar()">Entrar</button>
             </form>
         </dialog>
     </main>
